@@ -1,15 +1,15 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../images/mptc_background1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../images/salon_etudiants3.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -19,12 +19,38 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 75px;
+  height: 100px;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .logo {
-  width: 75px;
-  height: 75px;
+  font-size: 50px;
   object-fit: cover;
+  color: #ffffff;
+  padding: 30px;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.navigation ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.navigation .enroll {
+  size: 39px;
 }
