@@ -2,14 +2,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+}
+:root {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(../images/salon_etudiants3.jpg);
+  background: radial-gradient(
+    circle,
+    rgb(239, 187, 187) 0%,
+    rgb(157, 174, 186) 100%
+  );
   background-size: cover;
   background-position: center;
 }
@@ -21,15 +26,24 @@ nav {
   align-items: center;
   height: 100px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(203, 105, 105, 0);
+}
+
+nav img {
+  width: 140px;
+  height: 85px;
+  object-fit: cover;
+  padding-left: 30px;
+  mix-blend-mode: multiply;
+  position: center;
 }
 
 .logo {
-  font-size: 50px;
-  object-fit: cover;
-  color: #ffffff;
-  padding: 30px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  padding: 200px;
 }
 
 .navigation {
@@ -37,20 +51,63 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-right: 50px;
+  padding-right: 200px;
 }
 
 .navigation ul li {
   list-style-type: none;
   display: inline-block;
   padding: 10px;
+  gap: 25px;
+  padding-right: 75px;
 }
 
 .navigation ul li a {
   text-decoration: none;
-  color: white;
-  font-size: 18px;
+  color: black;
+  font-size: 20px;
 }
-.navigation .enroll {
-  size: 39px;
+
+h2 {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 50px;
+  padding: 35px;
+  padding-top: 10vh;
+}
+
+.container {
+  display: flex;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.general {
+  color: white;
+  font-size: 15px;
+  color: #ffffff;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: space-around;
+}
+
+.buy {
+  background-color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  border-radius: 50px;
+  width: 240px;
+  height: 45px;
+  position: relative;
+  visibility: inherit;
+}
+.image {
+  mix-blend-mode: multiply;
 }
