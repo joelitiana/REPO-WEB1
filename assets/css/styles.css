@@ -1,11 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
+    scroll-behavior: smooth;
+    
 }
 
 nav {
@@ -118,19 +121,26 @@ section{
     color: white;
 }
 
+.our_products{
+    display: flex;
+    flex-direction: column;
+
+}
+
 .products_content h2 {
     color: #111;
     font-size: 28px;
     text-transform: capitalize;
     text-align: center;
     margin-bottom: 30px;
+  
 }
 
 .products_content h2 span {
     color: red;
 }
 
-.first_shirt{
+.first_sale{
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -138,7 +148,7 @@ section{
     align-items: center;
 }
 
-.first_shirt .shirt2 {
+.first_sale .shirt2 {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -146,33 +156,46 @@ section{
    gap: 10px;
 }
 
-.first_shirt .shirt1 img{
+.first_sale:hover .shirt2 {
+    transition: transform 0.42s ease;
+}
+
+.first_sale .shirt2 img {
+ transition: scale(1.1);
+}
+
+.first_sale .shirt1 img{
     width: 350px;
     border-radius: 1cap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
-.first_shirt .shirt2 img{
+
+.first_sale .shirt2 img{
     width: 175px;
     border-radius: 1cap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
-.price{
+.price_shirt{
     padding: 100px;
 }
 
-.price h5{
+.price_shirt h5{
     color: red;
     font-size: larger
 }
 
-.price .select_size{
+.price_shirt .select_size{
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
 }
 
-.price .select_size .select_button{
+.price_shirt .select_size .select_button{
     display: inline-block;
     color: #ffffff;
     font-size: 16px;
@@ -186,7 +209,7 @@ section{
     cursor: pointer;
 }
 
-.price .select_size .add_button{
+.price_shirt .select_size .add_button{
     display: inline-block;
     color: #111;
     font-size: 16px;
@@ -198,19 +221,272 @@ section{
     cursor: pointer;
 }
 
-.price .select_size .select_button:hover{
+.price_shirt .select_size .select_button:hover {
     background-color: black;
     color: white;
 }
 
-.price .select_size .add_button:hover{
+.price_shirt .select_size .add_button:hover {
     background-color: black;
     color: white;
 }
 
-.price p{
+.price_shirt p {
     color:#333c56;
     font-size: 15px;
     font-style: italic;
-  
 }
+
+.second_sale {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-self:space-between; 
+    align-items: center;
+}
+
+.backpacks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.backpacks img{
+    width: 175px;
+    border-radius: 1cap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.backpacks0 img{
+    width: 350px;
+    border-radius: 1cap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.price_backpacks{
+    padding: 100px;
+}
+
+.price_backpacks h5{
+    color: red;
+    font-size: larger
+}
+
+.price_backpacks .select_size{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.price_backpacks .select_size .select_button{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    border-radius: 0.5cap;
+    background-color: red;
+    padding: 5px 15px;
+    transition: all .42s ease;  
+    cursor: pointer;
+}
+
+.price_backpacks .select_size .add_button{
+    display: inline-block;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 12px 25px;
+    transition: all .42s ease;  
+    cursor: pointer;
+}
+
+.price_backpacks .select_size .select_button:hover {
+    background-color: black;
+    color: white;
+}
+
+.price_backpacks .select_size .add_button:hover {
+    background-color: black;
+    color: white;
+}
+
+.price_backpacks p {
+    color:#333c56;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.other_sale{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+.other_sale .sale1{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 20px 10%;
+    justify-self:space-between; 
+    align-items: center;
+}
+
+.other_sale .sale1 img{
+    width: 200px;
+    height: 300px;
+    border-radius: 1cap;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+}
+
+.other_sale .sale2{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 20px 10%;
+    justify-self:space-between; 
+    align-items: center;
+}
+
+.other_sale .sale2 img{
+    width: 200px;
+    height: 300px;
+    border-radius: 1cap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: safe;
+    padding: 10px 10%;
+    background-color: #333c56;
+    width: 100%;
+    height: 300px;
+    font-family: 'Teko', sans-serif;
+}
+
+.help h5{
+    color: #ffffff; 
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+    text-decoration:underline;
+    
+}
+.help ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+.help ul li {
+    text-decoration: none; 
+}
+
+.help ul li a {
+    color: white; 
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+}
+
+.help ul li a:hover{
+    color: black;
+}
+
+.interest h5{
+    color: #ffffff;
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+    text-decoration:underline;
+}
+
+.interest {
+    list-style: none; 
+    padding: 0; 
+}
+
+.interest li {
+    text-decoration: none; 
+}
+
+.interest li a {
+    color: white; 
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+}
+
+.interest li a:hover{
+    color: black;
+}
+
+.privacy h5{
+    color: #ffffff;
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+    text-decoration:underline;
+    
+}
+.privacy {
+    list-style: none; 
+    padding: 0; 
+}
+
+.privacy li {
+    text-decoration: none; 
+}
+
+.privacy li a {
+    color: white; 
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+}
+
+.privacy li a:hover{
+    color: black;
+}
+
+.social_media li a {
+    color: white; 
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+}
+
+.social_media li a:hover{
+    color: black;
+}
+
+.social_media h5{
+    color: #ffffff;
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+    text-decoration:underline;
+    
+}
+.social_media {
+    list-style: none; 
+    padding: 0; 
+}
+
+.social_media li {
+    text-decoration: none; 
+}
+
