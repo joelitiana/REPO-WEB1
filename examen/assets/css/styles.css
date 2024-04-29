@@ -1,0 +1,216 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background-color: white;
+    box-shadow: 0 5px 100vh rgba(0, 0, 0, 0.335);
+
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1{
+    font-size: 30px;
+    font-family: 'montserrat', sans-serif;
+}
+.logo img {
+    width: 50px; 
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navigation a{
+    color: #2c2c22;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition:  all .42s ease;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: red;
+}
+
+.menu img {
+    width: 50px;
+    cursor: pointer;
+    align-items: baseline;
+}
+
+section{
+    padding: 5% 10%;
+}
+
+.home_content{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/back1.jpg);
+    display: grid;
+    align-items: center;
+    object-fit: cover;
+}
+
+.text h5{
+    color: red;
+    font-size: 16px;
+    text-transform: capitalize;
+   
+}
+
+.text h1{
+    color:black;
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10 px;
+}
+
+.text p{
+    color:#333c56;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px
+}
+
+.text .order_button{
+    display: inline-block;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 12px 25px;
+    transition: all .42s ease;  
+    cursor: pointer;
+}
+
+.text .order_button:hover{
+    background-color: black;
+    color: white;
+}
+
+.products_content h2 {
+    color: #111;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.products_content h2 span {
+    color: red;
+}
+
+.first_shirt{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-self:space-between; 
+    align-items: center;
+}
+
+.first_shirt .shirt2 {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+}
+
+.first_shirt .shirt1 img{
+    width: 350px;
+    border-radius: 1cap;
+}
+
+.first_shirt .shirt2 img{
+    width: 175px;
+    border-radius: 1cap;
+}
+
+.price{
+    padding: 100px;
+}
+
+.price h5{
+    color: red;
+    font-size: larger
+}
+
+.price .select_size{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.price .select_size .select_button{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    border-radius: 0.5cap;
+    background-color: red;
+    padding: 5px 15px;
+    transition: all .42s ease;  
+    cursor: pointer;
+}
+
+.price .select_size .add_button{
+    display: inline-block;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 12px 25px;
+    transition: all .42s ease;  
+    cursor: pointer;
+}
+
+.price .select_size .select_button:hover{
+    background-color: black;
+    color: white;
+}
+
+.price .select_size .add_button:hover{
+    background-color: black;
+    color: white;
+}
+
+.price p{
+    color:#333c56;
+    font-size: 15px;
+    font-style: italic;
+  
+}
