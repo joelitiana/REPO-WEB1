@@ -8,6 +8,7 @@
   box-sizing: border-box;
   font-family: "Jost", sans-serif;
   scroll-behavior: smooth;
+  transition: all 0.42s ease;
 }
 
 nav {
@@ -21,7 +22,8 @@ nav {
   padding: 20px 10%;
   background-color: white;
   box-shadow: 0 5px 100vh rgba(0, 0, 0, 0.335);
-  z-index: 100;
+  z-index: 10000;
+  position: fixed;
 }
 
 .logo {
@@ -87,7 +89,7 @@ section {
 }
 
 .text h1 {
-  color: black;
+  color: rgb(47, 55, 209);
   font-size: 65px;
   text-transform: capitalize;
   line-height: 1.1;
@@ -163,7 +165,7 @@ section {
   cursor: pointer;
 }
 
-.first_sale .shirt2 img:hover {
+.shirt2 img:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -176,11 +178,10 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-.first_sale .shirt1 img:hover {
+.shirt1 img:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
   transition: transform 0.42s ease;
+  box-shadow: 0 4px 70px -1px rgba(0, 0, 0, 0.5);
 }
 
 .price_shirt {
@@ -346,7 +347,6 @@ section {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
 }
 
 .other_sale .sale1 {
@@ -361,15 +361,16 @@ section {
 
 .other_sale .sale1 img {
   width: 200px;
-  height: 300px;
+  height: 275px;
+  object-fit: cover;
   border-radius: 1cap;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .other_sale .sale1 img:hover {
-  transform: scale(1.1) rotateY(10deg);
-
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba;
   transition: all 0.42s;
 }
 
@@ -384,17 +385,18 @@ section {
 
 .other_sale .sale2 img {
   width: 200px;
-  height: 300px;
+  height: 275px;
+  object-fit: cover;
   border-radius: 1cap;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
 .other_sale .sale2 img:hover {
-    transform: scale(1.1) rotateY(10deg);
-  
-    transition: all 0.42s;
-  }
+  transform: scale(1.1) rotateY(10deg);
+
+  transition: all 0.42s;
+}
 
 .about {
   display: flex;
@@ -402,6 +404,13 @@ section {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+}
+.about_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 90px;
 }
 
 .barca_fundation {
@@ -459,7 +468,7 @@ section {
 .trophy img:hover {
   transition: all 0.42s ease;
   transform: scale(1.05);
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .about p {
   font-size: small;
@@ -609,9 +618,15 @@ section {
   nav {
     padding: 15px 3%;
     transition: 0.4s;
+    z-index: 1000;
   }
 }
 @media (max-width: 630px) {
+  nav {
+    padding: 15px 3%;
+    transition: 0.4s;
+    z-index: 1000;
+  }
   .text h1 {
     font-size: 40px;
     transition: 0.4s;
@@ -624,64 +639,250 @@ section {
     padding: 10px 20px;
     transition: 0.4s;
   }
-}
-@media (max-width: 750px) {
-  .navigation {
-    display: none;
-    transition: all 0.42s;
-  }
-  .our_products{
-
-
-  }
-  .products_content h2{
-    font-size: 20px;
-  }
-  .first_sale{
+  .first_sale {
     display: flex;
-    flex-wrap:wrap;
-    align-items:flex-start;
-    justify-self:none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
-  .first_sale .shirt1 img {
-   width: 350px;
-   height: 300px;
-   object-fit: cover;
-    transition: all 0.4s;
-
-  }
-  .first_sale .shirt2{
+  .first_sale .shirt1 {
     display: none;
   }
   .first_sale .shirt2 img {
-    width: 100px;
-    height: 200px;
+    width: 700px;
+    height: 250px;
     border-radius: 1cap;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transform: all 0.4s ease;
     object-fit: cover;
   }
-  .price_shirt{
-    align-items: none;
-    justify-content: none;
+  .first_sale .shirt2 {
+    width: 200px;
   }
-  .price_shirt h5{
-  display: none;
+
+  .price_shirt h5 {
+    display: none;
     transition: 0.4s;
   }
-  .price_shirt h4{
-font-size: smaller;
-transition: all 0.4s;
+  .price_shirt h4 {
+    font-size: smaller;
+    transition: all 0.4s;
   }
   .price_shirt h3 {
     font-size: smaller;
   }
-  .price_shirt p{
+  .price_shirt p {
     display: none;
   }
-  .price_shirt .select_size .select_button{
-  font-size: 10px;
+  .price_shirt .select_size {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    align-items: first baseline;
+  }
+  .price_shirt .select_size .select_button {
+    font-size: 10px;
     transition: 0.4s;
+    padding: 6px 12px;
+  }
+  .price_shirt .select_size .add_button {
+    font-size: 10px;
+    transition: 0.4s;
+  }
+  .second_sale {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  .second_sale .price_backpacks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+
+  .second_sale .backpacks0 {
+    display: none;
+  }
+
+  .second_sale .backpacks img {
+    width: 150px;
+    height: 250px;
+    border-radius: 1cap;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transform: all 0.4s ease;
+    object-fit: cover;
+  }
+
+  .price_backpacks h5 {
+    display: none;
+    transition: 0.4s;
+  }
+
+  .price_backpacks h4 {
+    font-size: smaller;
+    transition: all 0.4s;
+  }
+
+  .second_sale.price_backpacks h3 {
+    font-size: smaller;
+    text-align: left;
+  }
+
+  .price_backpacks p {
+    display: none;
+  }
+
+  .price_backpacks .select_size {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    align-items: first baseline;
+  }
+
+  .price_backpacks .select_size .select_button {
+    font-size: 10px;
+    transition: 0.4s;
+    padding: 6px 12px;
+  }
+
+  .price_backpacks .select_size .add_button {
+    font-size: 10px;
+    transition: 0.4s;
+  }
+  .other_sale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .other_sale h2 {
+    font-size: smaller;
+  }
+
+  .other_sale .sale1 img {
+    width: 200px;
+    height: auto;
+  }
+  .other_sale .sale1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: none;
+    padding: 10px 10%;
+    gap: 10px;
+  }
+  .other_sale .sale2 {
+    display: none;
+  }
+  .about .about_content .barca_fundation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .about_conten {
+    background-color: aqua;
+  }
+  .about_content .barca_fundation img {
+    display: none;
+  }
+  .about h2 {
+    font-size: smaller;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about_content .barca_fundation h5 {
+    font-size: smaller;
+  }
+  .about_content .barca_fundation p {
+    font-size: smaller;
+    font-style: italic;
+  }
+
+  .about_content .trophy img {
+    display: none;
+  }
+  .about_content .trophy h5 {
+    font-size: smaller;
+  }
+  .about_content .trophy p {
+    font-size: smaller;
+    font-style: italic;
+  }
+  .footer {
+    align-items: flex-start;
+    height: auto;
+  }
+  .footer .list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .footer .list .help h5 {
+    font-size: smaller;
+  }
+  .footer .list .help ul li a {
+    font-size: smaller;
+  }
+  .footer .list .interest h5 {
+    font-size: smaller;
+  }
+  .footer .list .interest li a {
+    font-size: smaller;
+  }
+  .footer .list .privacy h5 {
+    font-size: smaller;
+  }
+  .footer .list .privacy li a {
+    font-size: smaller;
+  }
+  .footer .list .social_media h5 {
+    font-size: smaller;
+  }
+  .footer .list .social_media li a {
+    font-size: smaller;
+  }
+  .footer .list .partner{
+    padding: 50px;
+  }
 }
+
+
+@media (max-width: 750px) {
+  .navigation {
+    display: none;
+    transition: all 0.42s;
+  }
+
+  .products_content h2 {
+    font-size: 20px;
+  }
+  .first_sale .shirt2 img {
+    width: 100px;
+  }
+  .first_sale .shirt1 img {
+    width: 200px;
+  }
+  .second_sale .backpacks img {
+    width: 200px;
+  }
+  .price_shirt h5,
+  .price_shirt h4,
+  .price_shirt  h3,
+  .price_shirt .select_size,
+  .price_shirt p {
+    font-size: smaller;
+  }
+  
 }
